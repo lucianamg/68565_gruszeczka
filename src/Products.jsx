@@ -1,26 +1,19 @@
+import React from "react";
+import './index.css'
 function Products (){
     return (
-        <main className="mainSection">
+        <main className="section">
             <section className="firstSection">
                 <div>
-                    <h1>Un Título</h1>
-                    <p>Un texto</p>
-                    <img src="" alt="algo" />
+                    <h1>Productos</h1>
+                    <p>Lista de Productos</p>
+                    <img src="termometro.png" alt="algo" />
                 </div>
                 <div>
                     <p>otro div</p>
                 </div>
             </section>
-            <section className="secondSection">
-                <div>
-                    <h1>Un Título</h1>
-                    <p>Un texto</p>
-                    <img src="" alt="algo" />
-                </div>
-                <div>
-                    <p>otro div</p>
-                </div>
-            </section>
+            
         </main>
     );
 }

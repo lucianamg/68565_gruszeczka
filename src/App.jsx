@@ -1,22 +1,20 @@
 import { useState } from 'react'
-import reactLogo from '../public/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css'
 import Header from './components/Header';
-import MainSection from './components/MainSection'
-import Footer from './components/Footer'
-
+import MainSection from './components/MainSection';
+import Footer from './components/Footer';
+import Products from '/src/Products';
 function App() {
 
   return (
-    <div id='div' className='div'>
+    <div id='mainDiv' className='mainDiv'>
       <Header />
       <MainSection />
       <Footer />
     </div>
   )
 } 
-  export default App;
+  export default App; 
 
 /* Codigo test de function App 
 function App() {

@@ -1,10 +1,125 @@
-@import "tailwindcss";
+/*@import "tailwindcss"; todavia no lo entiendo y me rompe todo*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*.league-spartan-<uniquifier> {
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-weight: <100-900>;
+    font-style: normal;
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.header{
+  width: 100%;
+  background-color: rgba(166, 138, 39, 0.271);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "League Spartan", serif;
+  height: 7.4rem;
+}
+.headerALogo{
+width: 12%;
+margin-left: -2px;
+}
+.headerLogo{
+  width: 100%;
+}
+
+.header h1{
+  font-family: "League Spartan", serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+  width: 20%;
+  margin-left: 1rem;
+}
+.header p{
+  font-family: "League Spartan", serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+  width: 40%;
+  margin-left: 1rem;
+}
+.navbarUl{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+a{
+  font-family: "League Spartan", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #741529;
+  text-decoration: none;
+  list-style: none;
+  margin: .625rem;
+}
+a:hover {
+  color: #000000;
+}
+.navbarUl li{
+  text-decoration: none;
+  list-style: none;
+}
+.navbarCart{
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: .9375rem;
+}
+
+
+
+.cartImg {
+    width: 10%;
+
+  }
+.navbarCart{
+  display: flex;
+  flex-direction: row;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.mainSection{
+  min-height: 100vh;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer img{
+width: 5%;
+}
+.divCounter p{
+  font-family: "DM Sans", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #ec3de6;
+}
+/* ORIGINAL
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "League Spartan", serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme:inherit;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -13,28 +128,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 200;
-  color: #080a2f;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
+} 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
 
 button {
   border-radius: 8px;
@@ -48,7 +153,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #000000;
 }
 button:focus,
 button:focus-visible {
@@ -61,9 +166,9 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #000000;
   }
   button {
     background-color: #f9f9f9;
   }
-}
+}*/

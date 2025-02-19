@@ -1,7 +1,7 @@
 function Footer (){
     return (
         <footer className="footer">
-            <img src="" alt="logo" />
+            <img src="Atempo_Market_Logo.webp" alt="logo" />
             <a href="./index.html">Inicio</a>
             <p> &copy; 2025 Lu - Todos los derechos reservados</p>
             <div className="mediaContainer">

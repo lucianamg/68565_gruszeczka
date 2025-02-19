@@ -1,20 +1,26 @@
 import React from "react";
 import Products from '../Products';
+import '../index.css';
+import CartWidget from './CartWidget';
+
 function Navbar (){
     return (
-        
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="/src/Products.jsx">Productos</a></li>
-                <li><a href="/contact">Contacto</a></li>
-                <li><a href="/cartWidget">Carrito</a></li>
+        <nav className="navbar">
+            <ul className="navbarUl">
+                <li className="navbarIndex"><a href="./index.html">Inicio</a></li>
+                <li className="navbarProducts"><a href="#Products">Productos</a></li>
+                <li className="navbarContact"><a href="#Contact">Contacto</a></li>
+                <li className="navbarCart">
+                  <a href="#CartWidget">Carrito</a> 
+                  <img className="cartImg" src="carrito2.png" alt="carrito" />
+                  <CartWidget />
+                </li>
             </ul>
         </nav>
-        
     );
 }
-export default Navbar;
+export default Navbar; 
+                /*<li><a href="../src/Products.jsx">Productos</a></li>*/
 
 /* con link to
 function Navbar() {
@@ -29,5 +35,4 @@ function Navbar() {
       </nav>
     );
   }
-
   export default Navbar; */

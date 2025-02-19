@@ -1,13 +1,19 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-function Header (){
+
+function Header (){ 
     return (
-        <header>
-            <img src="" alt="logo" />
-            <h1>Atempo - manejá tus tiempos!</h1>
+        <header className="header">
+            <a className='headerALogo' href="#"><img className="headerLogo" src="Atempo_Market_Logo.webp" alt="Logo"/></a>
+            <h1>ATEMPO</h1>
+            <p>manejá tus tiempos!</p>
             <Navbar />
         </header>
     );
 }
 export default Header;
+
+/*
+<img src="Atempo_Market_Logo.webp" alt="logo" />
+*/
