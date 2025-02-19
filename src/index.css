@@ -78,9 +78,6 @@ a:hover {
   justify-content: flex-end;
   margin-right: .9375rem;
 }
-
-
-
 .cartImg {
     width: 10%;
 
@@ -104,14 +101,35 @@ a:hover {
   flex-direction: row;
   align-items: center;
 }
+.footer a{
+  width: 15%;
+}
+.footer p{
+  width: 40%;
+}
 .footer img{
 width: 5%;
+}
+.mediaContainer{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.mediaContainer a{
+  margin: 1rem;
+
 }
 .divCounter p{
   font-family: "DM Sans", serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #ec3de6;
+}
+.firstSection div img{
+  width: 10%;
+}
+.secondSection div img{
+  width: 10%;
 }
 /* ORIGINAL
 :root {
