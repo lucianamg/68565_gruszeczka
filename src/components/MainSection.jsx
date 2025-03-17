@@ -1,4 +1,5 @@
 import ItemListContainer from './ItemListContainer';
+import { Button } from './Button';
 
 function MainSection (){
     return (
@@ -12,7 +13,7 @@ function MainSection (){
                             fontSize: '2rem',
                         }}
                     >
-                    Hola, Aqui está ListItemContainer con su estilo integrado:</h1>
+                    ...ListItemContainer con su estilo integrado</h1>
                     <ItemListContainer greeting="Te damos la bienvenida a Atempo Market!"/>
                     <p style={{
                             backgroundColor: '#f2f2f2',
@@ -20,13 +21,16 @@ function MainSection (){
                             fontFamily: '"League Spartan", sans-serif',
                             fontSize: '2rem',
                         }}
-                    >Lo puse grande para que se vea bien. Creo que el estilo me gusta mas ponerlo en el css</p>
+                    >Lo puse grande para que se vea bien. </p>
                     
                 </div>
                 <div>
                     <h1>Otro Titulo</h1>
                     <p>No te olvides de regar las plantas</p>
                     <img src="riego.png" alt="algo" />
+                    <Button 
+                    content="ver mas"
+                    />
                 </div>
             </section>
             <section className="secondSection">

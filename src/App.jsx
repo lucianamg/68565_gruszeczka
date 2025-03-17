@@ -4,8 +4,7 @@ import Header from './components/Header';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import Products from '/src/Products';
-function App() {
-
+export const App = () => {
   return (
     <div id='mainDiv' className='mainDiv'>
       <Header />
@@ -14,7 +13,6 @@ function App() {
     </div>
   )
 } 
-  export default App; 
 
 /* Codigo test de function App 
 function App() {

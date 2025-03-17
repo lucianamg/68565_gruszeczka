@@ -29,11 +29,11 @@ body {
   font-family: "League Spartan", serif;
   height: 7.4rem;
 }
-.headerALogo{
+.header__aLogo{
 width: 12%;
 margin-left: -2px;
 }
-.headerLogo{
+.header__imgLogo{
   width: 100%;
 }
 
@@ -51,7 +51,7 @@ margin-left: -2px;
   width: 40%;
   margin-left: 1rem;
 }
-.navbarUl{
+.navbar__Ul{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -69,11 +69,15 @@ a{
 a:hover {
   color: #000000;
 }
-.navbarUl li{
+.navbar{
+  display: flex;
+  flex-direction: row;
+}
+.navbar__Ul li{
   text-decoration: none;
   list-style: none;
 }
-.navbarCart{
+.navbar__Cart{
   align-items: center;
   justify-content: flex-end;
   margin-right: .9375rem;
@@ -82,7 +86,7 @@ a:hover {
     width: 10%;
 
   }
-.navbarCart{
+.navbar__Cart{
   display: flex;
   flex-direction: row;
 }
@@ -91,9 +95,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: left;
+  background-color: antiquewhite;
+  min-height: 100vh;/*ver si esto va aca o solo en mainsection*/
 }
 .mainSection{
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  flex-grow: 1;
 }
 
 .footer{
@@ -106,6 +113,7 @@ a:hover {
 }
 .footer p{
   width: 40%;
+  opacity: 50%;
 }
 .footer img{
 width: 5%;
@@ -123,13 +131,22 @@ width: 5%;
   font-family: "DM Sans", serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #ec3de6;
+  
 }
 .firstSection div img{
   width: 10%;
 }
 .secondSection div img{
   width: 10%;
+}
+.blue{
+  
+  color: rgb(37, 37, 158);
+  background-color: aqua;
+}
+.red{
+  color: #741529;
+  background-color: #ec3de6;
 }
 /* ORIGINAL
 :root {

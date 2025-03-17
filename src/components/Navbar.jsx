@@ -1,26 +1,20 @@
 import React from "react";
 import Products from '../Products';
 import '../index.css';
-import CartWidget from './CartWidget';
-
-function Navbar (){
+import { CartWidget } from './CartWidget';
+/* al usar fc flecha cambiar los import ponerles llave import Products >> import { Products }*/
+export const Navbar = () => { 
     return (
         <nav className="navbar">
-            <ul className="navbarUl">
-                <li className="navbarIndex"><a href="./index.html">Inicio</a></li>
-                <li className="navbarProducts"><a href="#Products">Productos</a></li>
-                <li className="navbarContact"><a href="#Contact">Contacto</a></li>
-                <li className="navbarCart">
-                  <a href="#CartWidget">Carrito</a> 
-                  <img className="cartImg" src="carrito2.png" alt="carrito" />
-                  <CartWidget />
-                </li>
-            </ul>
+                <a href="./index.html">Inicio</a>
+                <a href="#Products">Productos</a>
+                <a href="#Contact">Contacto</a>
+                <img className="cartImg" src="carrito2.png" alt="carrito"/>
+                <CartWidget /> 
         </nav>
     );
 }
-export default Navbar; 
-                /*<li><a href="../src/Products.jsx">Productos</a></li>*/
+/*<li><a href="../src/Products.jsx">Productos</a></li>*/
 
 /* con link to
 function Navbar() {
@@ -36,3 +30,16 @@ function Navbar() {
     );
   }
   export default Navbar; */
+  /*
+  navbar viejo
+              <ul className="navbar__Ul">
+                <li className="navbar__Index"><a href="./index.html">Inicio</a></li>
+                <li className="navbar__Products"><a href="#Products">Productos</a></li>
+                <li className="navbar__Contact"><a href="#Contact">Contacto</a></li>
+                <li className="navbar__Cart">
+                  <a href="#CartWidget">Carrito</a> 
+                  <img className="cartImg" src="carrito2.png" alt="carrito" />
+                  <CartWidget />
+                </li>
+            </ul>
+  */ 
