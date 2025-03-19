@@ -3,12 +3,17 @@ import './index.css'
 import Header from './components/Header';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
-import Products from '/src/Products';
+import { Routes, Route } from 'react-router-dom';
 export const App = () => {
   return (
     <div id='mainDiv' className='mainDiv'>
       <Header />
-      <MainSection />
+      <Routes>
+        <Route path="/" element={<MainSection />}/>
+        <Route path="/Relojes" element={ <p>Relojes</p> }/>
+        <Route path="/Carrito" element={<p>Carrito</p> }/>
+      </Routes>
+      
       <Footer />
     </div>
   )

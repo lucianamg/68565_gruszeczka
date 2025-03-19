@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import { Button } from './Button';
-
+import { Items } from './Items';
 const ItemListContainer = () => {
   const [showProducts, setShowProducts] = useState([]) //es un array vacio 
   useEffect(()=>{
@@ -18,19 +18,14 @@ const ItemListContainer = () => {
     <div className='itemlistcontainer'>
       {showProducts.map((products) => {
         return(
-          <article className='itemArticle'>
-            <h3>{products.title}</h3>
-            <img src={products.thumbnail} alt={products.title} className='itemImage'/>
-            <h2>${products.price}</h2>
-            <Button 
-              content="Descripción"
-            />
-          </article>
+          <Items 
+          key={products.id}
+          prod={products} />
         )
       })}
     </div>
   );
-}; /* use thumbnail porque IMAGES venian rotas */
+}; /* usé thumbnail porque IMAGES venian rotas */
 
 export default ItemListContainer;
 /* Hacer un formulario usando UseRef: clase 8: 00.49 a 01.11 */

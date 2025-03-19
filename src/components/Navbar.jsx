@@ -1,16 +1,16 @@
 import React from "react";
-import Products from '../Products';
 import '../index.css';
+import { Link, NavLink } from "react-router-dom";
 
 import { CartWidget } from './CartWidget';
 /* al usar fc flecha cambiar los import ponerles llave import Products >> import { Products }*/
 export const Navbar = () => { 
     return (
         <nav className="navbar">
-                <a href="./index.html">Inicio</a>
-                <a href="#Products">Productos</a>
-                <a href="#Contact">Contacto</a>
-                <img className="cartImg" src="carrito2.png" alt="carrito"/>
+                <NavLink to="/" className="navbar_link"> Inicio</NavLink>
+                <NavLink to="/Relojes" className="navbar_link"> Relojes</NavLink>
+                <NavLink to="/Carrito" className="navbar_link"> Carrito</NavLink>
+                <img className="cartImg" src="carrito1.png" alt="carrito"/>
                 <CartWidget /> 
         </nav>
     );
