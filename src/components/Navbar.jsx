@@ -1,6 +1,7 @@
 import React from "react";
 import Products from '../Products';
 import '../index.css';
+
 import { CartWidget } from './CartWidget';
 /* al usar fc flecha cambiar los import ponerles llave import Products >> import { Products }*/
 export const Navbar = () => { 

@@ -1,27 +1,15 @@
 import ItemListContainer from './ItemListContainer';
 import { Button } from './Button';
+import { ButtonsTest } from './ButtonsTest';
 
 function MainSection (){
     return (
         <main className="mainSection">
             <section className="firstSection">
                 <div>
-                    <h1 style={{
-                            backgroundColor: '#f2f2f2',
-                            textAlign: 'center',
-                            fontFamily: '"League Spartan", sans-serif',
-                            fontSize: '2rem',
-                        }}
-                    >
-                    ...ListItemContainer con su estilo integrado</h1>
-                    <ItemListContainer greeting="Te damos la bienvenida a Atempo Market!"/>
-                    <p style={{
-                            backgroundColor: '#f2f2f2',
-                            textAlign: 'center',
-                            fontFamily: '"League Spartan", sans-serif',
-                            fontSize: '2rem',
-                        }}
-                    >Lo puse grande para que se vea bien. </p>
+                    <h1>...Te damos la bienvenida a Atempo Market!</h1>
+                    <ItemListContainer />
+                    <ButtonsTest />
                     
                 </div>
                 <div>

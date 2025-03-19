@@ -28,34 +28,29 @@ body {
   align-items: center;
   font-family: "League Spartan", serif;
   height: 7.4rem;
+  justify-content: space-between;
 }
 .header__aLogo{
-width: 12%;
+width: 10%;
 margin-left: -2px;
 }
 .header__imgLogo{
-  width: 100%;
+  height: 7.4rem;
 }
 
 .header h1{
   font-family: "League Spartan", serif;
   font-size: 2.5rem;
   font-weight: 200;
-  width: 20%;
+  width: 15%;
   margin-left: 1rem;
 }
 .header p{
   font-family: "League Spartan", serif;
   font-size: 2.5rem;
   font-weight: 200;
-  width: 40%;
+  width: 35%;
   margin-left: 1rem;
-}
-.navbar__Ul{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
 }
 a{
   font-family: "League Spartan", serif;
@@ -69,9 +64,17 @@ a{
 a:hover {
   color: #000000;
 }
+.navbar__Ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .navbar{
   display: flex;
   flex-direction: row;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
 }
 .navbar__Ul li{
   text-decoration: none;
@@ -81,6 +84,7 @@ a:hover {
   align-items: center;
   justify-content: flex-end;
   margin-right: .9375rem;
+  width: 12%;
 }
 .cartImg {
     width: 10%;
@@ -131,7 +135,6 @@ width: 5%;
   font-family: "DM Sans", serif;
   font-weight: 400;
   font-size: 1.6rem;
-  
 }
 .firstSection div img{
   width: 10%;
@@ -139,15 +142,63 @@ width: 5%;
 .secondSection div img{
   width: 10%;
 }
-.blue{
-  
+.divCounter .blue{
   color: rgb(37, 37, 158);
   background-color: aqua;
 }
-.red{
-  color: #741529;
+
+.divCounter .red{
+  color: #e7e7e7;
   background-color: #ec3de6;
 }
+.itemlistcontainer{
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-Radius: 8px;
+  text-Align: center;
+  font-family: "League Spartan", serif;
+  font-size: 2rem;
+  color: #333;
+  
+}
+.firstSection h1{
+  background-color: #fafafa;
+  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+}
+.firstSection p{
+  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.8rem;
+  
+}
+.itemlistcontainer{
+display:grid;
+grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+gap: 0.5rem;
+}
+.itemArticle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+border-radius: 5px;
+padding: 0.5rem;
+background-color: rgb(255, 252, 241);
+}
+.itemArticle img{
+  /*width: 100%;no hace nada*/
+}
+.itemImage{
+  /*width: 100%; no hace nada*/
+}
+.itemlistcontainer article img{
+  width: 90%;
+}
+
+
+
 /* ORIGINAL
 :root {
   font-family: "League Spartan", serif;
