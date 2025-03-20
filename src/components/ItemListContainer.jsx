@@ -1,10 +1,13 @@
 import React, { useState , useEffect } from 'react';
 import { Button } from './Button';
 import { Items } from './Items';
+import { useParams } from 'react-router-dom';
+
 const ItemListContainer = () => {
   const [showProducts, setShowProducts] = useState([]) //es un array vacio 
-  useEffect(()=>{
-    fetch('https://dummyjson.com/products')
+  const parameter = useParams()
+  useEffect(()=>{  //aca abajo me falta ver como poner un filtro por que yo no tengo un archivo json 
+    fetch(parameter.name === undefined ? 'https://dummyjson.com/products' : `/${parameter.name}.json`)
       .then(res => res.json())
       .then((resJson) => {setShowProducts(resJson.products)})
       .catch((err) => {
@@ -12,7 +15,7 @@ const ItemListContainer = () => {
         console.log(err)
         }
       )
-  },[])
+  },[parameter.name])
 
   return (
     <div className='itemlistcontainer'>

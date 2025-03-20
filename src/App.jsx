@@ -4,18 +4,20 @@ import Header from './components/Header';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
+import ItemListContainer from './components/ItemListContainer';
 export const App = () => {
   return (
     <div id='mainDiv' className='mainDiv'>
       <Header />
       <Routes>
         <Route path="/" element={<MainSection />}/>
-        <Route path="/Relojes" element={ <p>Relojes</p> }/>
+        <Route path="/Category/:name" element={ <ItemListContainer /> }/>
         <Route path="/Carrito" element={<p>Carrito</p> }/>
       </Routes>
       
       <Footer />
-    </div>
+    </div> /* Cuando hice esto de ROUTES se me rompieron las imagenes que estaban como 
+    link, en los A (logo, carrito, etc)*/
   )
 } 
 
