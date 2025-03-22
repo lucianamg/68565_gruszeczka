@@ -187,12 +187,7 @@ width: 5%;
   padding: 0.5rem;
   background-color: rgb(255, 252, 241);
 }
-.itemArticle img{
-  /*width: 100%;no hace nada*/
-}
-.itemImage{
-  /*width: 100%; no hace nada*/
-}
+
 .itemlistcontainer article img{
   width: 90%;
 }
