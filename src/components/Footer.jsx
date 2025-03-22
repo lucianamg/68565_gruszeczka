@@ -1,8 +1,15 @@
+import { Link, NavLink } from "react-router-dom";
 function Footer (){
     return (
         <footer className="footer">
-            <img src="Atempo_Market_Logo.webp" alt="logo" />
-            <a href="./index.html">Inicio</a>
+            <NavLink 
+                to="/" 
+                className="navbar_link">            
+                <img src={`${import.meta.env.BASE_URL}Atempo_Market_Logo.webp`} alt="logo" />
+                Inicio
+            </NavLink>
+            
+
             <p> &copy; 2025 Lu - Todos los derechos reservados</p>
             <div className="mediaContainer">
                 <p>Visitanos en redes</p>

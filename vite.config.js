@@ -8,4 +8,5 @@ export default defineConfig({
 react(), 
 tailwindcss(),
 ],
+base:'/68565_gruszeczka/'//agregado para que ande github pages
 });

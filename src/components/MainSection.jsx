@@ -15,7 +15,7 @@ function MainSection (){
                 <div>
                     <h1>Otro Titulo</h1>
                     <p>No te olvides de regar las plantas</p>
-                    <img src="riego.png" alt="algo" />
+                    <img src={`${import.meta.env.BASE_URL}riego.png`} alt="algo" />
                     <Button 
                     content="ver mas"
                     />
@@ -25,7 +25,7 @@ function MainSection (){
                 <div>
                     <h1>y ademas</h1>
                     <p> que les de un poco de sol</p>
-                    <img src="luz-del-sol.png" alt="algo" />
+                    <img src={`${import.meta.env.BASE_URL}luz-del-sol.png`} alt="algo" />
                 </div>
                 <div>
                     <p>otro div</p>
