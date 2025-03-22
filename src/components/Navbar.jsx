@@ -8,8 +8,8 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
                 <NavLink to="/" className="navbar_link"> Inicio</NavLink>
-                <NavLink to="/Category/perfumes" className="navbar_link"> Relojes</NavLink>
-                <NavLink to="/Category/Agendas" className="navbar_link"> Agendas</NavLink>
+                <NavLink to="/Category/Fragrances" className="navbar_link"> Relojes</NavLink>
+                <NavLink to="/Category/Beauty" className="navbar_link"> Agendas</NavLink>
                 <NavLink to="/Carrito" className="navbar_link"> <img className="cartImg" src="carrito1.png" alt="carrito"/></NavLink>
                 
                 <CartWidget /> 

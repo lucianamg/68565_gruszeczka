@@ -1,15 +1,27 @@
 import React, { useState , useEffect } from 'react';
-import { Button } from './Button';
+//import { Button } from './Button';
 import { Items } from './Items';
 import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
-  const [showProducts, setShowProducts] = useState([]) //es un array vacio 
-  const parameter = useParams()
+  const [showProducts, setShowProducts] = useState([]); //es un array vacio 
+  const parameter = useParams();
   useEffect(()=>{  //aca abajo me falta ver como poner un filtro por que yo no tengo un archivo json 
-    fetch(parameter.name === undefined ? 'https://dummyjson.com/products' : `/${parameter.name}.json`)
+    //fetch(parameter.name === undefined ? 'products.json' : `/${parameter.name}.json`) Cuando tenga mi archivo, ver clase 9 desde 01:48:00
+    fetch('https://dummyjson.com/products')
       .then(res => res.json())
-      .then((resJson) => {setShowProducts(resJson.products)})
+      .then((resJson) => {
+        const allproducts = resJson.products;
+        if (!parameter.name){
+          setShowProducts(allproducts);
+        }else{
+          //filtro por parameter (recordar que esto lo tengo que cambiar cuando ponga mi json porque las categorias de esta api difieren de las de mi pagina)
+          const filtered = allproducts.filter(p=>
+            p.category.toLowerCase() === parameter.name.toLowerCase()
+          );
+          setShowProducts(filtered);
+        }
+      })
       .catch((err) => {
         console.log("error de fetch")
         console.log(err)
