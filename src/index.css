@@ -32,25 +32,36 @@ body {
 }
 .header__aLogo{
   width: 10%;
-  margin-left: -2px;
+  /*margin-left: -2px;*/
 }
 .header__imgLogo{
   height: 7.4rem;
 }
 
-.header h1{
-  font-family: "League Spartan", serif;
-  font-size: 2.5rem;
-  font-weight: 200;
-  width: 15%;
-  margin-left: 1rem;
-}
 .header p{
   font-family: "League Spartan", serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 200;
-  width: 35%;
-  margin-left: 1rem;
+  width: 30%;
+  margin-left: 0.1rem;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  width: 48%;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__Ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar__Ul li{
+  text-decoration: none;
+  list-style: none;
 }
 a{
   font-family: "League Spartan", serif;
@@ -59,35 +70,30 @@ a{
   color: #741529;
   text-decoration: none;
   list-style: none;
-  margin: .625rem;
+  margin: 0.65rem;
 }
 a:hover {
   color: #000000;
 }
-.navbar__Ul{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.navbar{
-  display: flex;
-  flex-direction: row;
-  width: 40%;
-  align-items: center;
-  justify-content: center;
-}
-.navbar__Ul li{
-  text-decoration: none;
-  list-style: none;
-}
 .navbar__Cart{
   align-items: center;
   justify-content: flex-end;
-  margin-right: .9375rem;
+  margin-right: 0.1rem;
+  
+}
+.navbar_link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cartWidget{
   width: 12%;
+  margin-right: 15px;
+  
 }
 .cartImg {
-    width: 20%;
+    width: 100%;
   }
 .navbar__Cart{
   display: flex;
@@ -110,29 +116,33 @@ a:hover {
   flex-direction: row;
   align-items: center;
 }
+.footer_link{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: flex-start;
+}
 .footer p{
   width: 40%;
   opacity: 50%;
 }
 .footer img{
-width: 30%;
+width: 40%;
 }
-.navbar_link{
-  width: 25%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-}
-
 .mediaContainer{
+  width: 60%;
   align-items: center;
   display: flex;
   flex-direction: row;
 }
 .mediaContainer a{
-  margin: 1rem;
-
+  margin: 0.5rem;
+  width: 30%;
+}
+.mediaContainer a img{
+  width: 35%;
 }
 .divCounter p{
   font-family: "DM Sans", serif;
@@ -140,11 +150,11 @@ width: 30%;
   font-size: 1.6rem;
 }
 .firstSection div img{
-  width: 10%;
+  max-width: 18.8438rem;
+  max-height: 18.8438rem;            /* despues ver como ajustar esto*/
+  
 }
-.secondSection div img{
-  width: 10%;
-}
+
 .divCounter .blue{
   color: rgb(37, 37, 158);
   background-color: aqua;
@@ -184,20 +194,20 @@ width: 30%;
 .itemArticle{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: normal;
   justify-content: space-between;
   border-radius: 5px;
   padding: 0.5rem;
   background-color: rgb(255, 252, 241);
 }
-
+.itemArticle img{
+  max-width: 18.8438rem;
+  max-height: 18.8438rem;              /* despues ver como ajustar esto*/
+}
 .itemlistcontainer article img{
-  width: 90%;
+  /*width: 90%;*/
 }
-.cartWidget p{
-  font-size: 1rem;
-  margin-left: -100px;/* despues lo cambio por el elemento que va*/
-}
+
 
 
 /* ORIGINAL

@@ -8,14 +8,16 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
                 <NavLink to="/" className="navbar_link"> Inicio</NavLink>
-                <NavLink to="/Category/Fragrances" className="navbar_link"> Relojes</NavLink>
-                <NavLink to="/Category/Beauty" className="navbar_link"> Agendas</NavLink>
-                <NavLink to="/Carrito" className="navbar_link"> <img className="cartImg" src={`${import.meta.env.BASE_URL}carrito1.png`} alt="carrito"/></NavLink>
-                
+                <NavLink to="/Categoria/relojes" className="navbar_link"> Relojes</NavLink>
+                <NavLink to="/Categoria/agendas" className="navbar_link"> Agendas</NavLink>
+                <NavLink to="/Categoria/libros-y-apps" className="navbar_link"> Apps y libros</NavLink>
                 <CartWidget /> 
         </nav>
     );
-}
+} /* 56:53 clase 11: ahora puso navlink Carrito dentro de Cartwidget 
+y aca dejó solo cartwidget*/
+/* en clase 12 hace todo lo del provider*/
+
 /*<li><a href="../src/Products.jsx">Productos</a></li>*/
 
 /* con link to

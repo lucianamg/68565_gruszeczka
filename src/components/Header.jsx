@@ -8,16 +8,15 @@ export default () => {
             <a className='header__aLogo' href="#">
                 <img 
                 className="header__imgLogo" 
-                src={`${import.meta.env.BASE_URL}Atempo_Market_Logo.webp`} 
+                src={`${import.meta.env.BASE_URL}Atempo_Market_Logo.png`} 
                 alt="Logo"
                 />
             </a>
-            <h1>ATEMPO</h1>
             <p>manejá tus tiempos!</p>
             <Navbar />
         </header>
     );
 }
 /*
-<img src="Atempo_Market_Logo.webp" alt="logo" />
+<img src="Atempo_Market_Logo.png" alt="logo" />
 */

@@ -1,23 +1,28 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 import './index.css'
 import Header from './components/Header';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer';
+import Cart from './components/Cart';
+import ProductDetailContainer from './components/ProductDetailContainer';
+import CustomProvider from './components/CustomContext';
+//import { CustomProvider } from './components/CustomContext';
 export const App = () => {
   return (
+    <CustomProvider>
     <div id='mainDiv' className='mainDiv'>
       <Header />
       <Routes>
         <Route path="/" element={<MainSection />}/>
-        <Route path="/Category/:name" element={ <ItemListContainer /> }/>
-        <Route path="/Carrito" element={<p>Carrito</p> }/>
+        <Route path="/Categoria/:id" element={ <ItemListContainer /> }/>
+        <Route path="/Cart" element={<Cart /> }/>
+        <Route path="/ProductDetail/:id" element={<ProductDetailContainer />} />
       </Routes>
-      
       <Footer />
-    </div> /* Cuando hice esto de ROUTES se me rompieron las imagenes que estaban como 
-    link, en los A (logo, carrito, etc)*/
+    </div> 
+    </CustomProvider>
   )
 } 
 

@@ -2,7 +2,52 @@ import React, { useState , useEffect } from 'react';
 //import { Button } from './Button';
 import { Items } from './Items';
 import { useParams } from 'react-router-dom';
+//import { app } from '../firebaseConfig';
+import app from '../firebaseConfig';
+import { collection, getFirestore, getDocs, where, query } from 'firebase/firestore';
 
+const ItemListContainer = () => {
+  const [showProducts, setShowProducts] = useState([]); //es un array vacio 
+  const parameter = useParams();
+  useEffect(()=>{  
+    const dbProducts = getFirestore(app)
+    const dbCollection = collection(dbProducts, "products")
+    let gettingDocs;
+    if (parameter.id === undefined){
+      gettingDocs = getDocs(dbCollection)
+    }else{
+      const categoryFilter = query(dbCollection, where("categoria", "==", parameter.id))
+      gettingDocs = getDocs(categoryFilter)
+    }
+    gettingDocs
+      .then((dbanswer) => {
+        console.log("todo bien")
+        const productsfromdb = []
+        dbanswer.docs.forEach((doc)=>{
+          productsfromdb.push(doc.data())
+        })
+        console.log(productsfromdb)
+        setShowProducts(productsfromdb)
+      })
+      .catch(() => {console.log("todo mal")})
+
+    },[parameter.id])
+
+    return (
+      <div className='itemlistcontainer'>
+        {showProducts.map((products) => {
+          return(
+            <Items 
+            key={products.id}
+            prod={products} />
+          )
+        })}
+      </div>
+    );
+  
+}  
+export default ItemListContainer;
+/* Este es mi cod de cuando iba a buscar los prod a la api
 const ItemListContainer = () => {
   const [showProducts, setShowProducts] = useState([]); //es un array vacio 
   const parameter = useParams();
@@ -40,9 +85,11 @@ const ItemListContainer = () => {
       })}
     </div>
   );
-}; /* usé thumbnail porque IMAGES venian rotas */
+};  usé thumbnail porque IMAGES venian rotas 
+FIN DEL CODIGO de cuando traia los productos de la api
+*/
 
-export default ItemListContainer;
+
 /* Hacer un formulario usando UseRef: clase 8: 00.49 a 01.11 */
 /*CLase 8 en 01.26 muestra llevarse un codigo a otro elemento como tengo que hacer yo*/
 
