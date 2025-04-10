@@ -1,15 +1,6 @@
 
 import React, {useState} from 'react';
-/*export const Counter = ({products = '23'})=> {
-    const [count,setCount] = useState(0)
-    return (
-        <div>
-            <p>{products}</p>
-            <p>{Counter}</p>
-            <button>Agregar al carrito</button>
-            <button>Eliminar</button>
-        </div>
-    )}*/
+
 export const ButtonsTest = () => {
     const [count,setCount] = useState(0)
     const [changeColor,setChangeColor] = useState(true)
@@ -35,7 +26,17 @@ export const ButtonsTest = () => {
     )
 }
 
-
+/* antes tenia esto, como contador con numero fijo
+export const Counter = ({products = '23'})=> {
+    const [count,setCount] = useState(0)
+    return (
+        <div>
+            <p>{products}</p>
+            <p>{Counter}</p>
+            <button>Agregar al carrito</button>
+            <button>Eliminar</button>
+        </div>
+    )}*/
 /*function CartWidget (){
     const
     return (

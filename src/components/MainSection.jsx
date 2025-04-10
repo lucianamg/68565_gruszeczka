@@ -9,7 +9,6 @@ function MainSection (){
                 <div>
                     <h1>Te damos la bienvenida a Atempo Market!</h1>
                     <ItemListContainer />
-                    <ButtonsTest />
                 </div>
             </section>
         </main>

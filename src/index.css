@@ -22,7 +22,8 @@ body {
 
 .header{
   width: 100%;
-  background-color: rgba(166, 138, 39, 0.271);
+  /*background-color: rgba(166, 138, 39, 0.271);*/
+  background-color: rgba(236, 222, 172, 0.271);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -44,6 +45,7 @@ body {
   font-weight: 200;
   width: 30%;
   margin-left: 0.1rem;
+  color: #495138;
 }
 
 .navbar{
@@ -103,7 +105,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background-color: antiquewhite;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+  background-color: #f9f6ea;
   min-height: 100vh;/*ver si esto va aca o solo en mainsection*/
 }
 .mainSection{
@@ -165,20 +169,25 @@ width: 40%;
   background-color: #ec3de6;
 }
 .itemlistcontainer{
-  background-color: #f2f2f2;
+  background-color: #f9f6ea;
   padding: 1rem;
   border-Radius: 8px;
   text-Align: center;
   font-family: "League Spartan", serif;
+  font-weight: 300;
   font-size: 2rem;
-  color: #333;
+  color: #181A14;
   
 }
 .firstSection h1{
-  background-color: #fafafa;
+  background-color: #f9f6ea;
   text-align: center;
   font-family: "League Spartan", sans-serif;
   font-size: 2rem;
+  font-weight: 400;
+  color: #000000;
+  margin: 3rem;
+
 }
 .firstSection p{
   text-align: center;
@@ -194,21 +203,112 @@ width: 40%;
 .itemArticle{
   display: flex;
   flex-direction: column;
-  align-items: normal;
+  align-items: center;
   justify-content: space-between;
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: rgb(255, 252, 241);
+  
 }
 .itemArticle img{
   max-width: 18.8438rem;
   max-height: 18.8438rem;              /* despues ver como ajustar esto*/
 }
+.itemArticle h3{
+font-family: "League Spartan", serif;
+font-weight: 300;
+font-size: 1.9rem;
+color: #181A14;
+}
 .itemlistcontainer article img{
   /*width: 90%;*/
 }
+.productDetailContainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.productDetailBox {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  
+  gap: 2rem;
+}
+.productDetailImage img{
+  width: 400px;
+}
+.productDetailText{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+.productDetailTitle {
+  font-family: "League Spartan", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 1rem;
+}
+.productDetailDescription {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-align: justify;
+  color: #181A14;
+  margin: 1rem;
+}
 
+.productDetailPrice{
+  font-family: "League Spartan", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #EFB136;
+  margin: 1rem;
+}
+.productDetailRate{
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.productDetailButton {
+  background-color: #EFB136;
+  color: #181A14;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+  align-self: center;
+}
 
+.productDetailButton:hover {
+  background-color: #d99c28;
+}
+.purchaseForm{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+.purchaseFormTitle{
+  font-size: 1.8rem;
+  margin: 5rem 0 0 1rem;
+
+}
+.formField{
+  font-size: 1.2rem;
+}
+.purchaseForm label{
+  font-size: 1.5rem;
+}
+.purchaseForm h1{
+  font-size: 2rem;
+}
 
 /* ORIGINAL
 :root {

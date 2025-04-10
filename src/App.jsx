@@ -9,6 +9,7 @@ import Cart from './components/Cart';
 import ProductDetailContainer from './components/ProductDetailContainer';
 import CustomProvider from './components/CustomContext';
 //import { CustomProvider } from './components/CustomContext';
+import CartContainer from './components/CartContainer';
 export const App = () => {
   return (
     <CustomProvider>
@@ -17,8 +18,9 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MainSection />}/>
         <Route path="/Categoria/:id" element={ <ItemListContainer /> }/>
-        <Route path="/Cart" element={<Cart /> }/>
+        <Route path="/Cart" element={<CartContainer />} />
         <Route path="/ProductDetail/:id" element={<ProductDetailContainer />} />
+        
       </Routes>
       <Footer />
     </div> 
