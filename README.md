@@ -58,9 +58,9 @@ Los datos de compra se almacenan en una colección llamada `CartDetail` con los 
 Este proyecto fue pensado para funcionar en:
 
 ### GitHub Pages
-**(en proceso de configuración)**
+**(Estado:Cancelado)**
 
 ### Vercel
-**(pendiente de deploy final)**
+** https://68565-gruszeczka.vercel.app/**
 
 ---
