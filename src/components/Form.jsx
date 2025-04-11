@@ -1,4 +1,3 @@
-
 export const Form = () => {
     return(
         <div>
@@ -23,7 +22,3 @@ export const Form = () => {
     )
 }
 export default Form;
-
-//en react no se usa for en los forms sino htmlFor
-// los input aca no se cierran con la misma etiqueta sino solo con />
-// <input type="email" className="formField" placeholder="tu email" required />

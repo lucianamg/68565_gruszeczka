@@ -1,7 +1,5 @@
 import ItemListContainer from './ItemListContainer';
 
-
-
 function MainSection (){
     return (
         <main className="mainSection">

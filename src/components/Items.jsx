@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 export const Items = (props)=> {
     return (
@@ -11,5 +10,5 @@ export const Items = (props)=> {
         Descripción
         </Link> 
       </article>
-    );           //el Link deberia redirigir a product detail
+    );
 }

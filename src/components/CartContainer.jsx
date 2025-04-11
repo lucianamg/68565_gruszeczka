@@ -11,12 +11,12 @@ export const CartContainer = () => {
     const handleBuy = () => {
         const form = document.getElementById("purchaseForm");
         if (!form.checkValidity()) {
-        form.reportValidity(); // muestra los mensajes de error del form
+        form.reportValidity(); 
         return;
         }
         toast.success("¡Gracias por tu compra! Nos contactaremos al correo indicado.");
         
-        const db = getFirestore(app); // para mandar la info a firebase
+        const db = getFirestore(app); 
         const cartDetailCollection = collection(db, "CartDetail");
 
         const formData = {
@@ -32,26 +32,21 @@ export const CartContainer = () => {
             totalItems: cart.length,
             totalPrice: total,
             items: cart.map((item) => item.nombre),
-            datosUsuario: formData,//aca agrego lo del form
+            datosUsuario: formData,
             timestamp: new Date()
         };
 
-        console.log("Datos a guardar en Firestore:", cartData);
-        form.reset();//borro form post compra
+        form.reset();
         addDoc(cartDetailCollection, cartData)
         .then((docRef) => {
-            //console.log("Compra registrada con ID:", docRef.id);
-            
+          toast.success(`Compra realizada con ID: ${docRef.id}`); 
         })
         .catch((error) => {
-            toast.error("No se pudo completar la compra. Intentalo de nuevo.");
-            //console.error("Error al guardar la compra:", error);
-        }); // fin de mandar la info a firebase
-
-        clearCart();//borro carrito post compra
+            toast.error("No se pudo completar la compra. Intentalo de nuevo.");   
+        }); 
+        clearCart();
     };
-//como el form está dentro del mismo Cart y no separado del flujo, 
-//también desaparece el form al vaciarse el carrito. Me salio de casualidad.
+
   return (
     <Cart
       cart={cart}
