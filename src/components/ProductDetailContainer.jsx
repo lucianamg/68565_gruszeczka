@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { context } from "./CustomContext";
 import ProductDetail from "./ProductDetail";
 import React, { useState , useEffect } from 'react';
+import { toast } from 'react-toastify';
 import { Items } from './Items';
 import app from '../firebaseConfig';
 import { collection, getFirestore, getDocs, where, query } from 'firebase/firestore';
@@ -27,7 +28,10 @@ export const ProductDetailContainer = () => {
             console.log(productsfromdb)
             setShowProduct(productsfromdb[0])
           })
-          .catch(() => {console.log("todo mal")})
+          .catch(() => {
+            //console.log("todo mal")
+            toast.error("No se pudo cargar la lista de productos, inténtalo de nuevo.");
+        })
         },[])//[no va parameter.id]
 //esto es para el carrito
     const handleAddToCart = () => {

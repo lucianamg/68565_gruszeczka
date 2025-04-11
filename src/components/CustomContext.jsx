@@ -1,7 +1,9 @@
 
 import { createContext, useState, useEffect } from "react";
+import { toast } from 'react-toastify';
 export const context = createContext();
 export const ContextProvider = context.Provider;
+
 
 const CustomProvider = (props) => {
     const [cart, setCart] = useState(() => {
@@ -20,7 +22,7 @@ const CustomProvider = (props) => {
         if (!alreadyInCart) {
           setCart([...cart, product]);//los tres puntos son COPIAR array!!
         } else {
-          alert("Este producto ya está en el carrito.");
+          toast.error("Este producto ya está en el carrito.");
         }// esta es mi solucion para que no agregue mas del mismo item al producto
       };
       
@@ -28,6 +30,7 @@ const CustomProvider = (props) => {
         const newCart = [...cart];
         newCart.splice(index, 1);
         setCart(newCart);
+        toast.info("Producto eliminado del carrito");
       };
       const clearCart = () => {
         setCart([]);

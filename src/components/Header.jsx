@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar } from './Navbar';
 
-
 export default () => { 
     return (
         <header className="header">
@@ -17,6 +16,3 @@ export default () => {
         </header>
     );
 }
-/*
-<img src="Atempo_Market_Logo.png" alt="logo" />
-*/

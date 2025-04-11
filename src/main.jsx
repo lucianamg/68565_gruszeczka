@@ -4,7 +4,6 @@ import './index.css'
 import { App } from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
@@ -12,12 +11,3 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
-/* esto es lo mismo que hacer 
-const DOMElement = document.getElementById('root')
-const VDOMElement = createRoot(DOMElement)
-VDOMElement.render(
-<StrictMode>
-<App />
-</StrictMode>
-)
-*/ 

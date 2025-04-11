@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const ProductDetail = ({ prod, onAddToCart }) => {
@@ -17,5 +16,4 @@ const ProductDetail = ({ prod, onAddToCart }) => {
         </article>
     );
 };
-
 export default ProductDetail;

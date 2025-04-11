@@ -1,8 +1,8 @@
-# aTempo Market
+# aTempo Market 🛒
 
 Proyecto de e-commerce ficticio desarrollado con React, Firebase y React Toastify. Permite navegar por productos, ver su detalle, agregarlos al carrito y simular una compra con formulario de envío y pago.
 
-## Tecnologías utilizadas
+## 🛠 Tecnologías utilizadas
 
 - React 19
 - Vite
@@ -10,7 +10,7 @@ Proyecto de e-commerce ficticio desarrollado con React, Firebase y React Toastif
 - React Router DOM
 - React Toastify
 
-## Instalación y ejecución local
+## 🔧 Instalación y ejecución local
 
 1. Cloná el repositorio:
    ```bash
@@ -27,7 +27,7 @@ Proyecto de e-commerce ficticio desarrollado con React, Firebase y React Toastif
    npm run dev
    ```
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
 - Vista de productos por categoría.
 - Detalle de producto con botón para agregar al carrito.
@@ -39,11 +39,11 @@ Proyecto de e-commerce ficticio desarrollado con React, Firebase y React Toastif
   - Simulación de compra (con almacenamiento en Firestore).
 - Toasts para feedback del usuario.
 
-## Validaciones
+## 🧪 Validaciones
 
 El formulario de compra incluye validaciones HTML (`required`, `minLength`) antes de permitir finalizar la compra.
 
-## Firebase
+## ☁️ Firebase
 
 Los datos de compra se almacenan en una colección llamada `CartDetail` con los siguientes campos:
 
@@ -53,7 +53,7 @@ Los datos de compra se almacenan en una colección llamada `CartDetail` con los 
 - `datosUsuario` (datos del form)
 - `timestamp`
 
-## Despliegue
+## 📦 Despliegue
 
 Este proyecto fue pensado para funcionar en:
 
@@ -64,3 +64,11 @@ Este proyecto fue pensado para funcionar en:
 **(pendiente de deploy final)**
 
 ---
+
+## 🧹 TODO
+
+- [ ] Agregar toasts a todas las interacciones importantes.
+- [ ] Finalizar configuración de Firebase para deploy.
+- [ ] Subir a GitHub Pages.
+- [ ] Subir a Vercel.
+- [ ] Limpiar y comentar código.

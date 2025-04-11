@@ -3,7 +3,7 @@ import { context } from "./CustomContext";
 import Cart from "./Cart";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import app from "../firebaseConfig";
-
+import { toast } from 'react-toastify';
 
 export const CartContainer = () => {
     const { cart, removeFromCart, clearCart } = useContext(context);
@@ -14,9 +14,8 @@ export const CartContainer = () => {
         form.reportValidity(); // muestra los mensajes de error del form
         return;
         }
-        alert("¡Gracias por tu compra! Nos contactaremos al correo indicado.");
-        form.reset();//borro form post compra
-
+        toast.success("¡Gracias por tu compra! Nos contactaremos al correo indicado.");
+        
         const db = getFirestore(app); // para mandar la info a firebase
         const cartDetailCollection = collection(db, "CartDetail");
 
@@ -38,15 +37,17 @@ export const CartContainer = () => {
         };
 
         console.log("Datos a guardar en Firestore:", cartData);
-
+        form.reset();//borro form post compra
         addDoc(cartDetailCollection, cartData)
         .then((docRef) => {
-            console.log("Compra registrada con ID:", docRef.id);
+            //console.log("Compra registrada con ID:", docRef.id);
             
         })
         .catch((error) => {
-            console.error("Error al guardar la compra:", error);
+            toast.error("No se pudo completar la compra. Intentalo de nuevo.");
+            //console.error("Error al guardar la compra:", error);
         }); // fin de mandar la info a firebase
+
         clearCart();//borro carrito post compra
     };
 //como el form está dentro del mismo Cart y no separado del flujo, 

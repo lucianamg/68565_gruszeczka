@@ -1,7 +1,8 @@
 import React, { useState , useEffect } from 'react';
-//import { Button } from './Button';
+
 import { Items } from './Items';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 //import { app } from '../firebaseConfig';
 import app from '../firebaseConfig';
 import { collection, getFirestore, getDocs, where, query } from 'firebase/firestore';
@@ -29,7 +30,8 @@ const ItemListContainer = () => {
         console.log(productsfromdb)
         setShowProducts(productsfromdb)
       })
-      .catch(() => {console.log("todo mal")})
+      .catch(() => {toast.error("No se pudo cargar la lista de productos. Intentalo de nuevo.")})
+      
 
     },[parameter.id])
 
